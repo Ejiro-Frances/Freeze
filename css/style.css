@@ -15,9 +15,13 @@ a {
   text-decoration: none;
 }
 body {
-  background-color: #f5f5f5;
+  font-size: 18px;
+  background: repeating-radial-gradient(
+    circle,
+    hsla(0, 24%, 48%, 0.424),
+    hsl(0, 12%, 58%) 25%
+  );
 }
-
 nav {
   background-color: #fff;
   border-radius: 10px;
@@ -40,7 +44,7 @@ nav ul li::after {
   content: "";
   height: 2px;
   width: 0;
-  background-color: red;
+  background-color: brown;
   position: absolute;
   left: 0;
   bottom: -2px;
@@ -69,6 +73,21 @@ nav ul li:hover::after {
 }
 
 /* ========= Main================ */
+main {
+  color: brown;
+  -webkit-text-stroke: 0.5px black;
+  /* background: repeating-radial-gradient(
+    circle,
+    hsla(0, 44%, 18%, 0.424),
+    hsl(0, 12%, 58%) 20%
+      /* hsl(195, 74%, 62%),
+    hsl(235, 45%, 61%) 20%,
+    hsl(145, 58%, 55%) 20%,
+    hsl(226, 43%, 10%) 20% 
+  ); */
+  background-size: 100% 200%;
+  min-height: 100vh;
+}
 main section {
   width: 60%;
   padding: 50px;
@@ -78,25 +97,28 @@ main section {
 main section h1 {
   line-height: 4rem;
 }
-main .btns {
+.btns {
   padding-top: 30px;
 }
-main .btns button {
+.btns button {
   padding: 10px 20px;
-  background-color: coral;
+  background-color: white;
   border: none;
   border-radius: 5px;
   margin-right: 50px;
-  color: #fff;
+  color: black;
 }
-main .btns button:hover {
-  background-color: #3d3d94;
+.btns button:hover {
+  background-color: coral;
+  color: hsl(195, 74%, 62%);
 }
 .flexedSection {
   display: flex;
   flex-wrap: wrap;
   padding: 1px 30px 50px;
   gap: 20px;
+  padding: 45px 0;
+  margin: 20px;
 }
 .flexedSection img {
   height: 100px;
@@ -112,13 +134,101 @@ main .btns button:hover {
   border: 1px solid gray;
   padding: 90px 20px;
   width: 32%;
+  transition: all 0.9s ease-in-out;
+  background-color: hsl(0, 12%, 58%);
+  color: rgb(42, 14, 14);
 }
 .flexedSection .container:hover {
   border: 1px solid green;
-  box-shadow: 1px 1px 6px rgba(0 0 0 0.6);
+  box-shadow: 2px 30px 50px -5px #a7a4a4;
+  transition: all 0.9s ease-in-out;
+  /* box-shadow: 1px 1px 6px rgba(0 0 0 0.6); */
 }
 .flexedSection .container h4 {
   padding: 20px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+/* The third section begins */
+.aboutSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 40px;
+  padding: 30px;
+}
+.aboutSectionContainer {
+  width: 50%;
+  line-height: 2;
+}
+.aboutSectionContainer img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn {
+  margin-top: 70px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  margin-right: 50px;
+  color: black;
+}
+.btn:hover {
+  background-color: coral;
+  color: hsl(195, 74%, 62%);
+}
+
+/* Fourth sect */
+.serviceSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  max-width: 50ch;
+}
+.service h4 {
+  font-size: 35px;
+  font-weight: 800;
+}
+/* the grid */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1rem;
+  margin: 10px;
+  color: rgb(74, 17, 206);
+}
+.articleShowingServices {
+  background-color: hsl(0, 12%, 58%);
+  padding: 20px;
+  transition: all 0.9s ease-in-out;
+}
+.articleShowingServices:hover {
+  border: 1px solid hsl(0, 7%, 42%);
+  box-shadow: 2px 30px 50px -5px #a7a4a4;
+  transition: all 0.9s ease-in-out;
+  /* box-shadow: 1px 1px 6px rgba(0 0 0 0.6); */
+}
+.articleShowingServices div h5 {
+  font-size: 32px;
+  font-weight: 700;
+}
+.articleShowingServices div p {
+  font-size: 20px;
+  font-weight: 400;
 }
 /* ===========================
 media query begins here
