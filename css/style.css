@@ -205,21 +205,22 @@ main section h1 {
 /* the grid */
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: repeat(2, auto);
   gap: 1rem;
   margin: 10px;
-  color: rgb(74, 17, 206);
+  color: rgb(42, 14, 14);
 }
 .articleShowingServices {
   background-color: hsl(0, 12%, 58%);
   padding: 20px;
-  transition: all 0.9s ease-in-out;
+  transition: all 1s ease;
 }
 .articleShowingServices:hover {
   border: 1px solid hsl(0, 7%, 42%);
-  box-shadow: 2px 30px 50px -5px #a7a4a4;
-  transition: all 0.9s ease-in-out;
+  box-shadow: 2px 30px 50px -5px #000000;
+  transition: all 0.4s ease-in-out;
   /* box-shadow: 1px 1px 6px rgba(0 0 0 0.6); */
 }
 .articleShowingServices div h5 {
@@ -229,6 +230,15 @@ main section h1 {
 .articleShowingServices div p {
   font-size: 20px;
   font-weight: 400;
+  padding-top: 18px;
+}
+footer {
+  background: darkslategray;
+  color: white;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* ===========================
 media query begins here
@@ -331,9 +341,16 @@ media query begins here
     padding-top: 15px;
   }
   main .btns button {
-    margin: 0 10px;
+    margin: 0 2px;
   }
   .flexedSection .container {
     width: 100%;
+  }
+  .aboutSection {
+    display: block;
+  }
+  .aboutSectionContainer {
+    width: 100%;
+    line-height: 1.5;
   }
 }
