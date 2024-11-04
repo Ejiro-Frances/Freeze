@@ -1,34 +1,24 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 html {
   font-size: 80%;
 }
-ul {
-  list-style: none;
-}
+
 a {
   text-decoration: none;
 }
+
 body {
   font-size: 18px;
-  background: repeating-radial-gradient(
-    circle,
-    hsla(0, 24%, 48%, 0.424),
-    hsl(0, 12%, 58%) 25%
-  );
+  background: #ffffff;
+  color: #000000;
+  font-family: "Segoe UI", Tahoma, "Geneva", Verdana, sans-serif;
 }
 nav {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px 30px;
+  padding: 20px 30px 0;
   display: flex;
-  height: 60px;
   justify-content: space-between;
+  box-shadow: 10px 10px 10px 10px rgba(255, 255, 255, 0.5);
 }
 
 nav ul,
@@ -40,19 +30,31 @@ nav li {
   cursor: pointer;
   position: relative;
 }
+nav li:hover {
+  opacity: 0.8;
+}
 nav ul li::after {
   content: "";
   height: 2px;
   width: 0;
-  background-color: brown;
+  background-color: #272832;
   position: absolute;
   left: 0;
-  bottom: -2px;
+  bottom: 3.6rem;
   transition: 0.5s;
   border-radius: 5px;
 }
 nav ul li:hover::after {
   width: 100%;
+}
+.logo span {
+  border: 1px solid #2377a5;
+  background-color: #2377a5;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Dancing Script", sans-serif;
+  font-weight: 700;
 }
 #check {
   display: none;
@@ -63,7 +65,7 @@ nav ul li:hover::after {
 }
 .sideBarMenu img,
 .sideBarCloseBtn img {
-  background-color: rgb(196, 196, 201);
+  background-color: rgb(226, 226, 226);
   color: #fff;
   border-radius: 5px;
   padding: 0 4px;
@@ -74,8 +76,8 @@ nav ul li:hover::after {
 
 /* ========= Main================ */
 main {
-  color: brown;
-  -webkit-text-stroke: 0.5px black;
+  /* color: brown;
+  -webkit-text-stroke: 0.5px black; */
   /* background: repeating-radial-gradient(
     circle,
     hsla(0, 44%, 18%, 0.424),
@@ -85,40 +87,48 @@ main {
     hsl(145, 58%, 55%) 20%,
     hsl(226, 43%, 10%) 20% 
   ); */
-  background-size: 100% 200%;
-  min-height: 100vh;
+  /* background-size: 100% 200%; */
+  display: flex;
+  justify-content: center;
+  padding: 0 3rem;
+  gap: 2rem;
+  font-weight: 400;
 }
 main section {
-  width: 60%;
-  padding: 50px;
+  width: 50%;
   font-size: 1.5rem;
   line-height: 2.8rem;
 }
 main section h1 {
   line-height: 4rem;
+  font-weight: 700;
 }
 .btns {
   padding-top: 30px;
 }
 .btns button {
   padding: 10px 20px;
-  background-color: white;
+  background-color: #2377a5;
   border: none;
   border-radius: 5px;
   margin-right: 50px;
-  color: black;
+  color: coral;
 }
 .btns button:hover {
-  background-color: coral;
-  color: hsl(195, 74%, 62%);
+  color: white;
+  background: hsl(195, 74%, 62%);
+}
+main section img {
+  width: 100%;
+  height: 70%;
+  opacity: 0.7;
 }
 .flexedSection {
   display: flex;
   flex-wrap: wrap;
-  padding: 1px 30px 50px;
-  gap: 20px;
-  padding: 45px 0;
-  margin: 20px;
+  padding: 0.2rem 2rem;
+  gap: 1.5rem;
+  margin: 0 2rem;
 }
 .flexedSection img {
   height: 100px;
@@ -130,24 +140,22 @@ main section h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  line-height: 20px;
+  line-height: 2;
   border: 1px solid gray;
-  padding: 90px 20px;
-  width: 32%;
+  padding: 7rem 2rem;
+  width: 27%;
   transition: all 0.9s ease-in-out;
-  background-color: hsl(0, 12%, 58%);
   color: rgb(42, 14, 14);
 }
 .flexedSection .container:hover {
   border: 1px solid green;
   box-shadow: 2px 30px 50px -5px #a7a4a4;
   transition: all 0.9s ease-in-out;
-  /* box-shadow: 1px 1px 6px rgba(0 0 0 0.6); */
 }
 .flexedSection .container h4 {
-  padding: 20px;
+  padding: 1.5rem;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* The third section begins */
@@ -171,7 +179,7 @@ main section h1 {
 .btn {
   margin-top: 70px;
   padding: 10px 20px;
-  background-color: white;
+  background-color: hsl(195, 74%, 62%);
   border: none;
   border-radius: 5px;
   margin-right: 50px;
@@ -179,7 +187,7 @@ main section h1 {
 }
 .btn:hover {
   background-color: coral;
-  color: hsl(195, 74%, 62%);
+  color: white;
 }
 
 /* Fourth sect */
@@ -201,11 +209,11 @@ main section h1 {
 .service h4 {
   font-size: 35px;
   font-weight: 800;
+  margin-bottom: 1rem;
 }
 /* the grid */
 .gridContainer {
   display: grid;
-  /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: repeat(2, auto);
   gap: 1rem;
@@ -213,7 +221,8 @@ main section h1 {
   color: rgb(42, 14, 14);
 }
 .articleShowingServices {
-  background-color: hsl(0, 12%, 58%);
+  /* background-color: hsl(0, 12%, 58%); */
+  background: #f5f5f5;
   padding: 20px;
   transition: all 1s ease;
 }
@@ -231,6 +240,31 @@ main section h1 {
   font-size: 20px;
   font-weight: 400;
   padding-top: 18px;
+}
+/* pricing */
+.price .container {
+  padding: 1rem;
+  width: 29.6%;
+}
+.price small {
+  color: hsl(145, 58%, 55%);
+  font-size: 4rem;
+  font-weight: 400;
+}
+.gridImage {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto);
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.gridImage img {
+  max-width: 220px;
+  max-height: 250px;
+}
+.gridImage img:hover {
+  padding: 0 0.3rem;
 }
 footer {
   background: darkslategray;
